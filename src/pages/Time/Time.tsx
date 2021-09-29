@@ -16,12 +16,10 @@ export const Time = () => {
 
     useEffect(() => {
 
-        let timeNow = new Date().toTimeString().replace(/ .*/, '')
-
-        dispatch(setTimeAC(timeNow))
+        dispatch(setTimeAC(new Date().toTimeString().replace(/ .*/, '')))
 
         const intervalId: any = setInterval(() => {
-            dispatch(setTimeAC(timeNow))
+            dispatch(setTimeAC(new Date().toTimeString().replace(/ .*/, '')))
         }, 1000)
 
         return () => intervalId
