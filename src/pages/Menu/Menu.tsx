@@ -1,9 +1,9 @@
 import React from "react"
 import {useDispatch, useSelector} from "react-redux";
 import { Redirect } from "react-router-dom";
-import {setMenuModeAC, setTimeModeAC, setWeatherModeAC} from "../store/menu-reducer";
-import {AppRootStateType} from "../store/store";
-import {weatherApi} from "../api/weather-api";
+import {setMenuModeAC, setTimeModeAC, setWeatherModeAC} from "../../store/menu-reducer";
+import {AppRootStateType} from "../../store/store";
+import s from '../Menu/Menu.module.css'
 
 
 export const Menu = () => {
@@ -32,9 +32,9 @@ export const Menu = () => {
     }
 
     return (
-        <div className="menu">
-            <button onClick={onTimeButtonClickHandler}>Время</button>
-            <button onClick={onWeatherButtonClickHandler}>Погода</button>
+        <div className={s.menu}>
+            <button className={s.btn} onClick={onTimeButtonClickHandler}>Time</button>
+            <button className={s.btn} onClick={onWeatherButtonClickHandler}>Weather</button>
         </div>
 
     )
