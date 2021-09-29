@@ -6,8 +6,7 @@ import {Redirect} from "react-router-dom"
 import {useFormik} from "formik"
 import {setCityAC, setDataTC, setErrorAC} from "../../store/weather-reducer"
 import s from '../Weather/Weather.module.css'
-import left from '../../img/left.svg'
-import {BackButton} from "../../components/BackButton/BackButton";
+import {BackButton} from "../../components/BackButton/BackButton"
 
 export const Weather = () => {
 
